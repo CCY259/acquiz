@@ -341,17 +341,17 @@ const questions = [
     answer: "C"
   },
   {
-    question_ac: "In T3 Q6, we are inscribing a rectangle in an ellipse, and wish to find the greatest area of that rectangle. The tutor proceeds with the Lagrange multipliers method gets $y = \\lambda \\frac{2x}{16}$ and $x = \\lambda \\frac{2y}{9}$. He was then divide the first equation by $x$. Why is it valid in this context?",
+    question_ac: "In T3 Q6, we are inscribing a rectangle in an ellipse, and wish to find the greatest area of that rectangle. The tutor proceeds with the Lagrange multipliers method and gets $y = \\lambda \\frac{2x}{16}$ and $x = \\lambda \\frac{2y}{9}$. Then he divides the first equation by $x$. Why is it valid in this context?",
     options: {
       A: "We assume that $x,y>0$ because we place the rectangle on the first quadrant of the Cartesian plane.",
       B: "A rectangle with width $x=0$ would have zero area, which is definitely not the maximum.",
       C: "This is valid because the area of the rectangle inscribed in the ellipse must be nonzero.",
-      D: "This step is algebraically invalid because $x$ can be zero."
+      D: "This step is invalid because $x$ can be zero."
     },
     answer: "B"
   },
   {
-    question_ac: "The general Taylor formula at the origin includes the term $\\frac{1}{2!} (f_{xx}x^2 + 2f_{xy}xy + f_{yy}y^2)$. Which of the following best explain why we have a factor $2$ besides $f_{xy}$?",
+    question_ac: "The general Taylor formula at the origin includes the term $\\frac{1}{2!} (f_{xx}x^2 + 2f_{xy}xy + f_{yy}y^2)$. Which of the following best explains why we have a factor $2$ besides $f_{xy}xy$?",
     options: {
       A: "Because there are two variables $x$ and $y$.",
       B: "Because $f_{xy}=f_{yx}$.",
