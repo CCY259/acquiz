@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+<head> 
+  <script src="http://math.chapman.edu/~jipsen/latexmathjax/latexmathjax.js"></script>
+  <link rel="stylesheet" type="text/css" href="http://math.chapman.edu/~jipsen/latexmathjax/latexmathjax.css" />
+  <style>
+  body {
+    font-size: 1.35em; 
+    margin: 50px;
+    padding-left: 100px;
+    padding-right: 100px;
+    font-family: sans-serif;
+  }
+  /* font-family: sans-serif; */ 
+  /* Boxes for Choices */
+  .choice-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 5px;
+    transition: background-color 0.2s;
+  }
+  .choice-container:hover {
+    background-color: #f0f0f0;
+  }
+  .choice-box {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    line-height: 33px; /* Vertical center */
+    text-align: center;
+    border: 2px solid black;
+    font-weight: normal;
+    margin-right: 15px;
+    background-color: white;
+    flex-shrink: 0;
+    border-radius: 4px;
+  }
+  .choice-text {
+    font-size: 1.0em;
+  }
+
+  /* Disable (can adjust opacity) */
+  .disabled {
+    pointer-events: none;
+    opacity: 1.0;
+  }
+
+  /* Correct answer (make it green) */
+  .correct-choice .choice-box {
+    background-color: #388e3c;
+    color: white;
+    border-color: #388e3c;
+  }
+  
+  /* Correct answer (make it red) */
+  .wrong-choice .choice-box {
+    background-color: #d32f2f;
+    color: white;
+    border-color: #d32f2f;
+  }
+
+  p {
+    text-indent: 0;
+    margin-bottom: 15px;
+  }
+  </style>
+</head>
+
+<body>
+  <h1>Advanced Calculus Quiz - Partial Derivatives</h1>
+  <div>The quiz should be completed within 30 minutes.</div>
+  
+  <!-- Set up for quiz contents -->
+  <div id="quiz-container"></div>
+  
+  <div id="score-summary"></div>
+
+  <!-- Reset Progress Button -->
+  <button style="margin-top: 25px; margin-bottom: 25px; padding: 5px 10px; font-size: 0.5em; cursor: pointer;" 
+          onclick="if(confirm('Are you sure you want to clear all answers?')){ localStorage.clear(); location.reload(); }">
+    🔄 Reset Progress
+  </button>
+
+  <!-- Load quiz.js -->
+  <script src="quiz.js"></script>
+
+</body>
+</html>
+
+<!-- Disable some keys to prevent cheating -->
+<script>
+  document.addEventListener('contextmenu', e => e.preventDefault());
+  document.addEventListener('keydown', e => {
+    if (e.ctrlKey && (e.key === 'u' || e.key === 's' || e.key === 'Shift' || e.key === 'I' || e.key === "F12")) {
+      e.preventDefault();
+    }
+  });
+</script>
