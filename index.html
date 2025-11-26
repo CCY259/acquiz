@@ -2,9 +2,14 @@
 <html>
 <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 <head> 
+  <!-- Setting for mobile site -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- LaTeX support -->
   <script src="http://math.chapman.edu/~jipsen/latexmathjax/latexmathjax.js"></script>
   <link rel="stylesheet" type="text/css" href="http://math.chapman.edu/~jipsen/latexmathjax/latexmathjax.css" />
   <style>
+  /* Desktop style */
   body {
     font-size: 1.35em; 
     margin: 50px;
@@ -67,7 +72,27 @@
     text-indent: 0;
     margin-bottom: 15px;
   }
+
+  /* Mobile style */
+  /* Only works for those max-width 700px */
+  @media screen and (max-width: 700px) {
+    body {
+      /* Change margin, padding and font size in body */
+      margin: 20px;
+      padding-left: 0;
+      padding-right: 0;
+      font-size: 1.2em; 
+    }
+
+    /* Make the boxes bigger so they are easier to tapped */
+    .choice-box {
+      width: 40px;
+      height: 40px;
+      line-height: 38px;
+    }
+  }
   </style>
+
 </head>
 
 <body>
