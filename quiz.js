@@ -251,7 +251,7 @@ const questions = [
     answer: "B"
   },
   {
-    question_ac: "In T3 Q1, given the function $f(x,y) = y \\sin x$. The critical points occur where $f_x = y \\cos x = 0$ and $f_y = \\sin x = 0$. Determine whether my argument and conclusion is correct: I first assume that $y = 0$, so we always have $f_x = 0$. Hence $f_y = 0\\implies x = n\\pi$ where $n$ is an integer. Therefore $\\{(n\\pi, 0):n\\in\\mathbb{Z}\\}$ is the set of all critical points.",
+    question_ac: "In T3 Q1, given the function $f(x,y) = y \\sin x$. The critical points occur where $f_x = y \\cos x = 0$ and $f_y = \\sin x = 0$. Determine whether my argument and conclusion are correct: I first assume that $y = 0$, so we always have $f_x = 0$. Hence $f_y = 0\\implies x = n\\pi$ where $n$ is an integer. Therefore $\\{(n\\pi, 0):n\\in\\mathbb{Z}\\}$ is the set of all critical points.",
     options: {
       A: "Both argument and conclusion are correct.",
       B: "Both argument and conclusion are incorrect.",
